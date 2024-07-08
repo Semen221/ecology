@@ -29,6 +29,12 @@ async def howlong(ctx, item):
         await ctx.send('такой вещи нет в базе данных')
 
 @bot.command()
+async def useful_link(ctx):
+    if item in items.keys():
+        await ctx.send('Зайди на этот [сайт](https://ecoportal.info/)')
+        await ctx.send('Там будет всё про экологию и будут интересный факты')
+
+@bot.command()
 async def throw(ctx, item):
     if item in Throw.keys():
         if item == "стекло":
